@@ -1,42 +1,32 @@
-atom_package_names:
-  - git-plus
-  - language-slim
-  - sort-lines
-  - vim-mode
 dotfiles:
-  - .atom/keymap.cson
+  - .config/fish/config.fish
+  - .rbenv/default-gems
   - .gemrc
   - .gitconfig
   - .gitexcludes
   - .gitignore
-  - .inputrc
   - .pryrc
-  - .rbenv/default-gems
   - .rspec
-  - .tigrc
   - .tmux.conf
   - .zsh
   - .zshrc
 homebrew_cask_package_names:
   - alfred
-  - atom
-  - cooviewer
   - dropbox
   - firefox
   - google-chrome
   - google-japanese-ime
   - gyazo
   - iterm2
-  - karabiner
-  - licecap
-  - night-owl
   - sequel-pro
   - skitch
   - slack
-  - totalfinder
-  - vagrant
-  - virtualbox
+  - 1password
   - vlc
+  - sublime-text3
+  - postico
+  - github-desktop
+  - kobito
 homebrew_package_names:
   - caskroom/cask/brew-cask
   - cmake
@@ -61,3 +51,4 @@ homebrew_package_names:
   - tree
   - vim
   - zsh
+  - postgresql

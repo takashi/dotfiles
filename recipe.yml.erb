@@ -9,10 +9,6 @@ resources:
   - type: homebrew_cask_package
     name: <%= homebrew_cask_package_name %>
   <%- end -%>
-  <%- atom_package_names.each do |atom_package_name| -%>
-  - type: atom_package
-    name: <%= atom_package_name %>
-  <%- end -%>
   - type: rbenv_ruby
     version: 2.2.0
     global: true
@@ -53,18 +49,6 @@ resources:
     destination: /Users/<%= ENV["USER"] %>/src/github.com/r7kamura/dotfiles/linked/<%= path %>
     source: /Users/<%= ENV["USER"] %>/<%= path %>
   <%- end -%>
-  - type: karabiner
-    key: repeat.wait
-    value: 15
-    recheck_script: "true"
-  - type: karabiner
-    key: repeat.initial_wait
-    value: 0
-    recheck_script: "true"
-  - type: command
-    check_script: "finger -l | grep -E 'Shell: /bin/zsh$'"
-    script: sudo chsh -s /bin/zsh <%= ENV["USER"] %>
-handlers:
   - id: restart_dock
     type: command
     script: killall Dock

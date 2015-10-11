@@ -1,12 +1,12 @@
 [user]
-  name = Ryo Nakamura
-  email = r7kamura@gmail.com
+  name = Takashi Nakagawa
+  email = tak1240@gmail.com
 
 [include]
   path = .gitconfig.local
 
 [github]
-  user = r7kamura
+  user = takashi
 
 [color]
   diff        = auto
@@ -16,7 +16,7 @@
   interactive = auto
 
 [merge]
-  ff = false # from 1.7.6
+  ff = true
 
 [pull]
   rebase = true # from 1.7.9
@@ -34,12 +34,19 @@
   quotepath       = true
   autosetuprebase = always
 
+[url "git@github.com:"]
+  pushinsteadof = https://github.com/
+
+[credential]
+  helper = osxkeychain
+
 [alias]
   br = branch
   co = checkout
   dbr = !git branch --merged | grep -v \"\\* \" | xargs git branch --delete
-  bbb = browse -- pull/$(git rev-parse --abbrev-ref HEAD)
-[remote "origin"]
-  fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
+
 [ghq]
   root = ~/src
+
+[hub]
+  protocol = https
