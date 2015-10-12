@@ -36,6 +36,8 @@ GEM
       serverkit
     serverkit-homebrew (0.0.5)
       serverkit
+    serverkit-login_items (0.0.2)
+      serverkit
     serverkit-rbenv (0.0.3)
       serverkit
     slop (3.6.0)
@@ -54,6 +56,7 @@ DEPENDENCIES
   serverkit
   serverkit-defaults
   serverkit-homebrew
+  serverkit-login_items
   serverkit-rbenv
 
 BUNDLED WITH
