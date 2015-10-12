@@ -54,6 +54,9 @@ resources:
     destination: /Users/<%= ENV["USER"] %>/src/github.com/takashi/dotfiles/linked/<%= path %>
     source: /Users/<%= ENV["USER"] %>/<%= path %>
   <%- end -%>
+  - type: command
+    check_script: "finger -l | grep -E 'Shell: /bin/zsh$'"
+    script: sudo chsh -s /usr/local/bin/fish <%= ENV["USER"] %>
 handlers:
   - id: restart_dock
     type: command
