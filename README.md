@@ -5,5 +5,3 @@ A chain of configurations for my laptop.
 ```sh
 curl -LSfs https://raw.githubusercontent.com/takashi/dotfiles/master/install.sh | bash
 ```
-
-![](/images/install.gif)
