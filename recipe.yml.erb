@@ -14,7 +14,7 @@ resources:
     global: true
   <%- login_item_names.each do |login_item_name| -%>
   - type: login_items
-    path: /Users/takehiro/Applications/<%= login_item_name %>.app
+    path: /Users/<%= ENV["USER"] %>/Applications/<%= login_item_name %>.app
     hidden: true
   <%- end -%>
   - type: defaults
