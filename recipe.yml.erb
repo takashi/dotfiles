@@ -54,6 +54,7 @@ resources:
     destination: /Users/<%= ENV["USER"] %>/src/github.com/takashi/dotfiles/linked/<%= path %>
     source: /Users/<%= ENV["USER"] %>/<%= path %>
   <%- end -%>
+handlers:
   - id: restart_dock
     type: command
     script: killall Dock
