@@ -51,6 +51,8 @@ resources:
     repository: https://github.com/takashi/dotfiles.git
     path: /Users/<%= ENV["USER"] %>/src/github.com/takashi/dotfiles
     status: updated
+  - type: command # install oh-my-fish
+    script: curl -L https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish | fish
   <%- dotfiles.each do |path| -%>
   - type: symlink
     destination: /Users/<%= ENV["USER"] %>/src/github.com/takashi/dotfiles/linked/<%= path %>
