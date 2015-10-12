@@ -12,6 +12,11 @@ resources:
   - type: rbenv_ruby
     version: 2.2.0
     global: true
+  <%- login_item_names.each do |login_item_name| -%>
+  - type: login_items
+    path: /Users/takehiro/Applications/<%= login_item_name %>.app
+    hidden: true
+  <%- end -%>
   - type: defaults
     domain: com.apple.dock
     key: autohide

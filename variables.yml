@@ -52,3 +52,6 @@ homebrew_package_names:
   - vim
   - zsh
   - postgresql
+login_item_names:
+  - "Alfred 2"
+  - Dropbox
