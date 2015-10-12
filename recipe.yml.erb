@@ -57,7 +57,9 @@ resources:
     source: /Users/<%= ENV["USER"] %>/<%= path %>
   <%- end -%>
   - type: command
-    check_script: "finger -l | grep -E 'Shell: /bin/zsh$'"
+    script: echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+  - type: command
+    check_script: "finger -l | grep -E 'Shell: /usr/local/bin/fish$'"
     script: sudo chsh -s /usr/local/bin/fish <%= ENV["USER"] %>
 handlers:
   - id: restart_dock
