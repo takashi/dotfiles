@@ -8,8 +8,6 @@ dotfiles:
   - .pryrc
   - .rspec
   - .tmux.conf
-  - .zsh
-  - .zshrc
 homebrew_cask_package_names:
   - alfred
   - dropbox
@@ -51,7 +49,7 @@ homebrew_package_names:
   - tmux
   - tree
   - vim
-  - zsh
+  - fish
   - postgresql
 login_item_names:
   - "Alfred 2"
