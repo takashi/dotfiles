@@ -3,3 +3,4 @@
 *.swp
 .vim/.netrwhist
 node_modules
+npm-debug.log
