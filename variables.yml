@@ -51,6 +51,7 @@ homebrew_package_names:
   - vim
   - fish
   - postgresql
+  - graphiz
 login_item_names:
   - "Alfred 2"
   - Dropbox
