@@ -1,10 +1,8 @@
-# Path to your oh-my-fish.
-set fish_path $HOME/.oh-my-fish
+# Path to Oh My Fish install.
+set -gx OMF_PATH /Users/takashi/.local/share/omf
 
-# Theme
-set fish_theme toaster
-
-set fish_plugins theme
+# Customize Oh My Fish configuration path.
+#set -gx OMF_CONFIG /Users/takashi/.config/omf
 
 # aliases
 
@@ -49,4 +47,5 @@ set -x PGDATA /usr/local/var/postgres
 
 set -x EDITOR vim
 
-. $fish_path/oh-my-fish.fish
+# Load oh-my-fish configuration.
+source $OMF_PATH/init.fish
