@@ -14,8 +14,6 @@ resources:
   - type: rbenv_ruby
     version: 2.2.3
     global: true
-  - type: command
-    script: nodebrew install v4.2.1
   <%- login_item_names.each do |login_item_name| -%>
   - type: login_items
     path: /Users/takashi/Applications/<%= login_item_name %>.app

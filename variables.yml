@@ -52,7 +52,6 @@ homebrew_package_names:
   - fish
   - postgresql
   - coreutils
-  - nodebrew
 login_item_names:
   - "Alfred 2"
   - Dropbox
