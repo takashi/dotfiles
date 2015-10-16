@@ -38,6 +38,12 @@ function c
   ghq list -p | p cd
 end
 
+# rbenv
+#eval "$(rbenv init -)";
+set -x PATH $HOME/.rbenv/bin $PATH
+set -x PATH $HOME/.rbenv/shims $PATH
+rbenv rehash >/dev/null ^&1
+
 set -x GOPATH $HOME
 
 # Allow bundler to use all the cores for parallel installation
