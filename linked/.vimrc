@@ -9,6 +9,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'takashi/vim-questbeat'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'airblade/vim-gitgutter'
 
 NeoBundle 'sickill/vim-monokai'
 
@@ -24,6 +25,16 @@ NeoBundleCheck
 "-------------------------
 " End Neobundle Settings.
 "-------------------------
+
+"-------
+"" CtrlP
+"-------
+nmap <c-p> :CtrlP<cr>
+
+""---------------
+" vim-gitgutter
+" "---------------
+let g:gitgutter_eager = 0
 
 syntax enable
 colorscheme monokai
