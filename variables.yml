@@ -8,6 +8,7 @@ dotfiles:
   - .pryrc
   - .rspec
   - .tmux.conf
+  - .vimrc
 homebrew_cask_package_names:
   - alfred
   - dropbox
