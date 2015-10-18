@@ -10,6 +10,7 @@ NeoBundle 'takashi/vim-questbeat'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle "elixir-lang/vim-elixir"
 
 NeoBundle 'sickill/vim-monokai'
 
