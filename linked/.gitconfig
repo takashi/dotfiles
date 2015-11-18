@@ -43,7 +43,7 @@
 [alias]
   br = branch
   co = checkout
-  dbr = !git branch --merged | grep -v \"\\* \" | xargs git branch --delete
+  dmb = !git branch --merged | grep -v \"\\* \" | xargs git branch --delete
 
 [ghq]
   root = ~/src
@@ -52,6 +52,6 @@
   protocol = https
 
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
