@@ -43,6 +43,10 @@ end
 set -x PATH $HOME/.rbenv/shims $PATH
 rbenv rehash >/dev/null ^&1
 
+# pyenv
+set -x PATH $HOME/.pyenv/shims $PATH
+pyenv rehash >/dev/null ^&1
+
 set -x GOPATH $HOME
 
 # Allow bundler to use all the cores for parallel installation

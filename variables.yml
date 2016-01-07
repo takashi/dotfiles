@@ -44,6 +44,7 @@ homebrew_package_names:
   - peco
   - rbenv
   - rbenv-default-gems
+  - pyenv
   - readline
   - reattach-to-user-namespace
   - redis
