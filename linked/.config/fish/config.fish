@@ -1,10 +1,8 @@
 # Path to Oh My Fish install.
-set -gx OMF_PATH /Users/takashi/.local/share/omf
+set -gx OMF_PATH "/Users/takashi/.local/share/omf"
 
 # Customize Oh My Fish configuration path.
-#set -gx OMF_CONFIG /Users/takashi/.config/omf
-
-# aliases
+#set -gx OMF_CONFIG "/Users/takashi/.config/omf"
 
 ## git
 alias gpom="git pull origin master"
@@ -58,3 +56,6 @@ set -x EDITOR vim
 
 # Load oh-my-fish configuration.
 source $OMF_PATH/init.fish
+set fisher_home ~/.local/share/fisherman
+set fisher_config ~/.config/fisherman
+source $fisher_home/config.fish
