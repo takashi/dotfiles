@@ -27,8 +27,6 @@ homebrew_cask_package_names:
   - postico
   - github-desktop
   - kobito
-  - vagrant
-  - virtualbox
 homebrew_package_names:
   - caskroom/cask/brew-cask
   - cmake
