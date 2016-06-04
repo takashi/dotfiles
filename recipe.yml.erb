@@ -16,7 +16,7 @@ resources:
     global: true
   <%- login_item_names.each do |login_item_name| -%>
   - type: login_items
-    path: /Users/takashi/Applications/<%= login_item_name %>.app
+    path: /Users/<%= ENV["USER"] %>/Applications/<%= login_item_name %>.app
     hidden: true
   <%- end -%>
   - type: defaults
@@ -53,7 +53,7 @@ resources:
     value: 3 # Allow full keyboard access
   - type: git
     repository: https://github.com/takashi/dotfiles.git
-    path: /Users/takashi/src/github.com/takashi/dotfiles
+    path: /Users/<%= ENV["USER"] %>/src/github.com/takashi/dotfiles
     status: updated
   - type: command
     script: mkdir -p /Users/takashi/.vim/bundle
@@ -64,14 +64,14 @@ resources:
     script: curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
   <%- dotfiles.each do |path| -%>
   - type: symlink
-    destination: /Users/takashi/src/github.com/takashi/dotfiles/linked/<%= path %>
-    source: /Users/takashi/<%= path %>
+    destination: /Users/<%= ENV["USER"] %>/src/github.com/takashi/dotfiles/linked/<%= path %>
+    source: /Users/<%= ENV["USER"] %>/<%= path %>
   <%- end -%>
   - type: command
     script: echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
   - type: command
     check_script: "finger -l | grep -E 'Shell: /usr/local/bin/fish$'"
-    script: sudo chsh -s /usr/local/bin/fish takashi
+    script: sudo chsh -s /usr/local/bin/fish <%= ENV["USER"] %>
 handlers:
   - id: restart_dock
     type: command
