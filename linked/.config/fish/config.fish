@@ -12,7 +12,7 @@ alias gpum="git pull upstream master"
 alias be="bundle exec"
 
 ## server
-alias server="python -m SimpleHTTPServer"
+alias server="python -m http.server 8080"
 
 ## move to trash
 alias rm='gmv -f --backup=numbered --target-directory ~/.Trash/'
@@ -24,7 +24,7 @@ alias h="ghq"
 alias subl='reattach-to-user-namespace subl'
 
 set PATH $HOME/bin $PATH
-set -x PATH /usr/local/bin /usr/local/sbin $PATH
+set -x PATH /usr/local/bin $PATH
 
 function p
   peco | while read LINE
@@ -59,3 +59,9 @@ source $OMF_PATH/init.fish
 set fisher_home ~/.local/share/fisherman
 set fisher_config ~/.config/fisherman
 source $fisher_home/config.fish
+
+# export android sdk path
+set -x PATH /Users/takashi/Library/Android/sdk/platform-tools $PATH
+set -x PATH /Users/takashi/Library/Android/sdk/tools $PATH
+
+ssh-add ~/.ssh/takashi
