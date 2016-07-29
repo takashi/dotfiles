@@ -24,6 +24,9 @@
 [push]
   default = current
 
+[rebase]
+  autosquash = true
+
 [core]
   autocrlf     = input
   quotepath    = false
@@ -44,6 +47,8 @@
   br = branch
   co = checkout
   dmb = !git branch --merged | grep -v \"\\* \" | xargs git branch --delete
+  branch-root    = merge-base master HEAD
+  review         = !tig --no-walk -w $(git branch-root)..HEAD
 
 [ghq]
   root = ~/src
