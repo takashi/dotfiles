@@ -15,6 +15,9 @@
   status      = auto
   interactive = auto
 
+[diff]
+  compactionHeuristic = true
+
 [merge]
   ff = true
 
@@ -49,6 +52,7 @@
   dmb = !git branch --merged | grep -v \"\\* \" | xargs git branch --delete
   branch-root    = merge-base master HEAD
   review         = !tig --no-walk -w $(git branch-root)..HEAD
+  rebase-current = !git rebase -i $(git branch-root)
 
 [ghq]
   root = ~/src
