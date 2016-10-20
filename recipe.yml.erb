@@ -1,4 +1,4 @@
-resources:
+rresources:
   - type: command
     script: brew update
   <%- homebrew_package_names.each do |homebrew_package_name| -%>
@@ -16,7 +16,7 @@ resources:
     global: true
   <%- login_item_names.each do |login_item_name| -%>
   - type: login_items
-    path: /Users/qiita/Applications/<%= login_item_name %>.app
+    path: /Users/takashi/Applications/<%= login_item_name %>.app
     hidden: true
   <%- end -%>
   - type: defaults
@@ -53,7 +53,7 @@ resources:
     value: 3 # Allow full keyboard access
   - type: git
     repository: https://github.com/takashi/dotfiles.git
-    path: /Users/qiita/src/github.com/takashi/dotfiles
+    path: /Users/takashi/src/github.com/takashi/dotfiles
     status: updated
   - type: command
     script: mkdir -p /Users/takashi/.vim/bundle
@@ -61,14 +61,14 @@ resources:
     script: curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
   <%- dotfiles.each do |path| -%>
   - type: symlink
-    destination: /Users/qiita/src/github.com/takashi/dotfiles/linked/<%= path %>
-    source: /Users/qiita/<%= path %>
+    destination: /Users/takashi/src/github.com/takashi/dotfiles/linked/<%= path %>
+    source: /Users/takashi/<%= path %>
   <%- end -%>
   - type: command
     script: echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
   - type: command
     check_script: "finger -l | grep -E 'Shell: /usr/local/bin/fish$'"
-    script: sudo chsh -s /usr/local/bin/fish qiita
+    script: sudo chsh -s /usr/local/bin/fish takashi
 handlers:
   - id: restart_dock
     type: command
