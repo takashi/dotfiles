@@ -24,7 +24,6 @@ homebrew_cask_package_names:
   - github-desktop
   - kobito
 homebrew_package_names:
-  - caskroom/cask/brew-cask
   - cmake
   - gnu-sed
   - hub
