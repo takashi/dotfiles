@@ -57,9 +57,6 @@ resources:
     status: updated
   - type: command
     script: mkdir -p /Users/takashi/.vim/bundle
-  - type: git
-    repository: https://github.com/Shougo/neobundle.vim.git
-    path: /Users/takashi/.vim/bundle/neobundle.vim
   - type: command # install oh-my-fish
     script: curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
   <%- dotfiles.each do |path| -%>
