@@ -1,0 +1,53 @@
+dotfiles:
+  - .config/fish/config.fish
+  - .rbenv/default-gems
+  - .gemrc
+  - .gitconfig
+  - .gitexcludes
+  - .gitignore
+  - .pryrc
+  - .rspec
+  - .tmux.conf
+  - .vimrc
+homebrew_cask_package_names:
+  - alfred
+  - dropbox
+  - google-chrome
+  - google-japanese-ime
+  - gyazo
+  - iterm2
+  - sequel-pro
+  - skitch
+  - slack
+  - 1password
+  - sublime-text3
+  - github-desktop
+  - kobito
+homebrew_package_names:
+  - caskroom/cask/brew-cask
+  - cmake
+  - gnu-sed
+  - hub
+  - icu4c
+  - imagemagick
+  - jq
+  - motemen/ghq/ghq
+  - node
+  - openssl
+  - peco
+  - rbenv
+  - rbenv-default-gems
+  - pyenv
+  - readline
+  - reattach-to-user-namespace
+  - ruby-build
+  - tig
+  - tmux
+  - tree
+  - vim
+  - fish
+  - coreutils
+  - direnv
+login_item_names:
+  - "Alfred 2"
+  - Dropbox
