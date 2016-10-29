@@ -34,7 +34,7 @@
   autocrlf     = input
   quotepath    = false
   excludesfile = ~/.gitexcludes
-  editor = subl
+  editor = vim
 
 [branch]
   quotepath       = true
