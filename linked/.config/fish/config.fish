@@ -17,9 +17,8 @@ alias h="ghq"
 ## monkey patch http://qiita.com/tsho/items/74b06a203cef6f007d61
 alias subl='reattach-to-user-namespace subl'
 
-set PATH $HOME/bin $PATH
-set -x PATH /usr/local/bin $PATH
-set HOMEBREW_BREWFILE ~/.brewfile
+set PATH /usr/local/bin $PATH
+set HOMEBREW_BREWFILE /Users/takashi/src/github.com/takashi/Brewfile/Brewfile
 set HOMEBREW_CASK_OPTS "--appdir=~/Applications --caskroom=/etc/Caskroom"
 
 function p
