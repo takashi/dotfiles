@@ -1,16 +1,21 @@
-rresources:
+<%
+  temp_brew_file='/tmp/Brewfile.zip'
+  temp_brew_file_workspace='/tmp/Brewfile'
+%>
+
+resources:
   - type: command
     script: brew update
-  <%- homebrew_package_names.each do |homebrew_package_name| -%>
-  - type: homebrew_package
-    name: <%= homebrew_package_name %>
-  <%- end -%>
   - type: command
     script: brew tap caskroom/versions
-  <%- homebrew_cask_package_names.each do |homebrew_cask_package_name| -%>
-  - type: homebrew_cask_package
-    name: <%= homebrew_cask_package_name %>
-  <%- end -%>
+  - type: command
+    script: brew install rcmdnk/file/brew-file
+  - type: command # download Brewfile
+    script: curl -LSfs -o <%= temp_brew_file %> https://github.com/takashi/Brewfile/archive/master.zip
+  - type: command
+    script: unzip -oq <%= temp_brew_file %> -d <%= temp_brew_file_workspace %>
+  - type: command # Install applications from brew-file
+    script: HOMEBREW_BREWFILE=<%= "#{temp_brew_file_workspace}/Brewfile-master/Brewfile" %> HOMEBREW_CASK_OPTS="--appdir=~/Applications --caskroom=/etc/Caskroom" brew file install
   - type: rbenv_ruby
     version: 2.2.4
     global: true
@@ -55,10 +60,10 @@ rresources:
     repository: https://github.com/takashi/dotfiles.git
     path: /Users/takashi/src/github.com/takashi/dotfiles
     status: updated
-  - type: command
-    script: mkdir -p /Users/takashi/.vim/bundle
   - type: command # install oh-my-fish
     script: curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
+  - type: command # install fisherman
+    script: curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
   <%- dotfiles.each do |path| -%>
   - type: symlink
     destination: /Users/takashi/src/github.com/takashi/dotfiles/linked/<%= path %>

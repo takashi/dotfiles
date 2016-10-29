@@ -19,6 +19,8 @@ alias subl='reattach-to-user-namespace subl'
 
 set PATH $HOME/bin $PATH
 set -x PATH /usr/local/bin $PATH
+set HOMEBREW_BREWFILE ~/.brewfile
+set HOMEBREW_CASK_OPTS "--appdir=~/Applications --caskroom=/etc/Caskroom"
 
 function p
   peco | while read LINE
@@ -29,6 +31,11 @@ end
 function c
   ghq list -p | p cd
 end
+
+# brew-wrap does not support fish shell.
+# if [ -f (brew --prefix)/etc/brew-wrap ]
+#   source (brew --prefix)/etc/brew-wrap
+# end
 
 # rbenv
 #eval "$(rbenv init -)";
@@ -51,5 +58,4 @@ set -x PGDATA /usr/local/var/postgres
 
 set -x EDITOR vim
 
-ssh-add ~/.ssh/takashi
-
+ssh-add ~/.ssh/nakagawat
