@@ -1,6 +1,7 @@
 ## git
 alias gpom="git pull origin master"
 alias gpum="git pull upstream master"
+alias gbr="git browse-remote --pr"
 
 ## bundler
 alias be="bundle exec"
@@ -14,8 +15,11 @@ alias rm='gmv -f --backup=numbered --target-directory ~/.Trash/'
 ## ghq
 alias h="ghq"
 
-## monkey patch http://qiita.com/tsho/items/74b06a203cef6f007d61
-alias subl='reattach-to-user-namespace subl'
+## docker
+alias dc="docker-compose"
+
+## sublime
+alias open_conflicts="git diff --name-only | uniq | xargs subl"
 
 set PATH /usr/local/bin $PATH
 set HOMEBREW_BREWFILE /Users/takashi/src/github.com/takashi/Brewfile/Brewfile
@@ -39,6 +43,14 @@ end
 # rbenv
 #eval "$(rbenv init -)";
 set -x PATH $HOME/.rbenv/shims $PATH
+set -x PATH (yarn global bin) $PATH
+
+set -x ANDROID_HOME $HOME/Library/Android/sdk
+set -x PATH $ANDROID_HOME/tools $PATH
+set -x PATH $ANDROID_HOME/platform-tools $PATH
+
+
+
 rbenv rehash >/dev/null ^&1
 
 # pyenv
@@ -50,6 +62,8 @@ eval (direnv hook fish)
 
 set -x GOPATH $HOME
 
+set -x PATH $GOPATH/bin $PATH
+
 # Allow bundler to use all the cores for parallel installation
 set -x BUNDLE_JOBS 4
 
@@ -58,3 +72,6 @@ set -x PGDATA /usr/local/var/postgres
 set -x EDITOR vim
 
 ssh-add ~/.ssh/nakagawat
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/takashi/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/takashi/Downloads/google-cloud-sdk/path.fish.inc'; else; . '/Users/takashi/Downloads/google-cloud-sdk/path.fish.inc'; end; end

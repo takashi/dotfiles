@@ -1,6 +1,10 @@
 .DS_Store
+._.DS_Store
+.unison.._.DS_Store.*
 .*swm
 .*swn
 .*swo
 .*swp
 .tern-project
+.tern-config
+dump.rdb

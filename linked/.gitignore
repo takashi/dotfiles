@@ -4,3 +4,5 @@
 .vim/.netrwhist
 node_modules
 npm-debug.log
+rubocop_cache
+.tern-config
